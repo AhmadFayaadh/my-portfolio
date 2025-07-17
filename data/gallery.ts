@@ -24,7 +24,7 @@ export const galleryData: GalleryItem[] = [
   {
     title: "ObatKu App Design Process",
     description: "Working on UI/UX design for mobile health application using Figma",
-    image: "/images/gallery/obatku-design.jpg",
+    image: "/images/gallery/design-obatku.jpg",
     date: "October 2024",
     category: "Project",
   },
