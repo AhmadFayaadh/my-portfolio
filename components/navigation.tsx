@@ -22,7 +22,7 @@ const navItems = [
 
 export default function Navigation({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavigationProps) {
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm border-b border-gray-200 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="font-bold text-xl text-navy-900">AFB</div>
@@ -33,7 +33,7 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen, scrollToSection 
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-600 hover:text-navy-900 transition-colors duration-200 font-medium"
+                className="text-gray-600 hover:text-cyan-400 hover:scale-105 hover:underline underline-offset-4 transition-all duration-300 font-medium"
               >
                 {item.label}
               </button>
@@ -53,7 +53,7 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen, scrollToSection 
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 text-gray-600 hover:text-navy-900 transition-colors duration-200"
+                className="block w-full text-left py-2 text-gray-600 hover:text-cyan-400 hover:scale-105 hover:underline underline-offset-4 transition-all duration-300"
               >
                 {item.label}
               </button>

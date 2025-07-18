@@ -23,43 +23,25 @@ export const projectsData: Project[] = [
     description:
       "Travel booking website with clean and modern interface for flight ticket reservations. Includes search functionality, booking flow, and payment integration design.",
     type: "Web Design",
-    image: "/images/projects/pemula-travel.jpg",
+    image: "/images/projects/pemula-travel.jpeg",
     technologies: ["Figma", "Web Design", "User Research", "Wireframing"],
   },
   {
-    title: "CTF Writeups Repository",
-    role: "Security Researcher",
-    description:
-      "Comprehensive collection of Capture The Flag competition solutions and writeups. Covers web exploitation, cryptography, forensics, and reverse engineering challenges.",
-    type: "Cybersecurity",
-    image: "/images/projects/ctf-writeups.jpg",
-    technologies: ["Python", "Bash", "Web Security", "Cryptography", "Forensics"],
-  },
-  {
-    title: "Network Security Lab",
-    role: "Student Researcher",
-    description:
-      "University project implementing various network security protocols and analyzing vulnerabilities. Includes firewall configuration and intrusion detection systems.",
-    type: "Academic Project",
-    image: "/images/projects/network-security.jpg",
-    technologies: ["Linux", "Wireshark", "iptables", "Nmap", "Network Analysis"],
-  },
-  {
-    title: "Vulnerability Scanner Tool",
-    role: "Developer",
-    description:
-      "Python-based automated vulnerability scanning tool for web applications. Features include SQL injection detection, XSS scanning, and security report generation.",
-    type: "Security Tool",
-    image: "/images/projects/vuln-scanner.jpg",
-    technologies: ["Python", "Requests", "BeautifulSoup", "Security Testing"],
-  },
-  {
     title: "Portfolio Website",
-    role: "Full Stack Developer",
+    role: "Web Developer",
     description:
       "Personal portfolio website built with modern web technologies. Features responsive design, smooth animations, and optimized performance.",
     type: "Web Development",
-    image: "/images/projects/portfolio-website.jpg",
+    image: "/images/projects/portofolio-website.png",
     technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+  },
+  {
+    title: "Notes",
+    role: "Web Developer",
+    description:
+      "A simple web app that allows users to create, categorize, and manage personal notes. Built with a clean, responsive interface and real-time search. Data is stored in localStorage for full offline access.",
+    type: "Web Development",
+    image: "/images/projects/notes.png",
+    technologies: ["Html", "JavaScript", "CSS"],
   },
 ]

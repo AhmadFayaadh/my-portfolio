@@ -10,7 +10,7 @@ export default function AboutSection() {
             in people's lives.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Currently pursuing my degree in Informatics at UPN "Veteran" Jakarta with a GPA of 3.86, I'm actively
+            Currently pursuing my degree in Informatics at UPN "Veteran" Jakarta, I'm actively
             involved in cybersecurity communities and continuously learning new technologies to stay ahead in this
             rapidly evolving field.
           </p>

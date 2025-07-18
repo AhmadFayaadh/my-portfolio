@@ -6,22 +6,34 @@ const experiences = [
     title: "Red Team Staff",
     organization: "KSM Cyber Security",
     type: "Organization",
-    period: "2023 - Present",
+    period: "2024 - Present",
     description: "Conducting penetration testing exercises and security assessments for student projects",
+    image: "/images/experience/foto-cyber.png",
   },
   {
     title: "Media & Event Delegate",
     organization: "CATUR UPNVJ",
     type: "Organization",
-    period: "2023",
+    period: "2024",
     description: "Managing social media content and coordinating cybersecurity awareness events",
+    image: "/images/experience/foto-catur.png",
+  },
+  {
+    title: "Bootcamp e-Learning – Program Scheduling & Academic Coordination",
+    organization: "KSM Cyber Security",
+    type: "Bootcamp",
+    period: "2025",
+    description:
+      "Serve as the person in charge (PIC) for front-end classes, coordinating with assistant mentors to ensure smooth running of sessions. Responsible for scheduling, monitoring attendance, and submitting reports after each bootcamp session.",
+    image: "/images/experience/logo-cyber.png",
   },
   {
     title: "Registration & Logistics",
     organization: "Dies Natalis FIK",
     type: "Committee",
-    period: "2023",
+    period: "2025",
     description: "Organizing participant registration and event logistics for faculty anniversary celebration",
+    image: "/images/experience/logo-upn.jpeg",
   },
 ]
 
@@ -32,20 +44,39 @@ export default function ExperienceSection() {
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Experience</h2>
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <Card key={index} className="border-l-4 border-l-navy-900">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <CardTitle className="text-xl">{exp.title}</CardTitle>
-                    <CardDescription className="text-lg font-medium text-navy-900 mb-2">
-                      {exp.organization}
-                    </CardDescription>
-                    <CardDescription className="text-sm text-gray-500 mb-3">{exp.period}</CardDescription>
-                    <p className="text-gray-600 text-sm">{exp.description}</p>
-                  </div>
-                  <Badge variant="secondary">{exp.type}</Badge>
+            <Card
+              key={index}
+              className="border-l-4 border-l-navy-900 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5
+                         hover:border-blue-500 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center p-6"
+            >
+              {exp.image && (
+                <div className="flex-shrink-0 mr-8 mb-4 sm:mb-0 w-72 overflow-hidden">
+                  {" "}
+                  {/* Ukuran logo */}
+                  <img
+                    src={exp.image || "/placeholder.svg"}
+                    alt={`${exp.organization} Logo`}
+                    className="w-full h-full object-contain rounded-md border border-gray-200 p-1"
+                  />
                 </div>
-              </CardHeader>
+              )}
+              <div className="flex-grow">
+                <CardHeader className="p-0 pb-2">
+                  <div className="flex justify-between items-start">
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl">{exp.title}</CardTitle>
+                      <CardDescription className="text-xl font-medium text-navy-900 mb-2">
+                        {exp.organization}
+                      </CardDescription>
+                      <CardDescription className="text-base text-gray-500 mb-3">{exp.period}</CardDescription>
+                      <p className="text-gray-700 text-base">{exp.description}</p>
+                    </div>
+                    <Badge variant="secondary" className="text-sm">
+                      {exp.type}
+                    </Badge>
+                  </div>
+                </CardHeader>
+              </div>
             </Card>
           ))}
         </div>

@@ -1,62 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-
-const projectsData = [
-  {
-    title: "ObatKu",
-    role: "UI/UX Designer",
-    description:
-      "Mobile application designed to help users find medicines and nearby pharmacies with an intuitive interface. Features include medicine search, pharmacy locator, and prescription management.",
-    type: "Mobile App Design",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Figma", "UI/UX Design", "Mobile Design", "Prototyping"],
-  },
-  {
-    title: "Pemula Travel",
-    role: "UI/UX Designer",
-    description:
-      "Travel booking website with clean and modern interface for flight ticket reservations. Includes search functionality, booking flow, and payment integration design.",
-    type: "Web Design",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Figma", "Web Design", "User Research", "Wireframing"],
-  },
-  {
-    title: "CTF Writeups Repository",
-    role: "Security Researcher",
-    description:
-      "Comprehensive collection of Capture The Flag competition solutions and writeups. Covers web exploitation, cryptography, forensics, and reverse engineering challenges.",
-    type: "Cybersecurity",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Python", "Bash", "Web Security", "Cryptography", "Forensics"],
-  },
-  {
-    title: "Network Security Lab",
-    role: "Student Researcher",
-    description:
-      "University project implementing various network security protocols and analyzing vulnerabilities. Includes firewall configuration and intrusion detection systems.",
-    type: "Academic Project",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Linux", "Wireshark", "iptables", "Nmap", "Network Analysis"],
-  },
-  {
-    title: "Vulnerability Scanner Tool",
-    role: "Developer",
-    description:
-      "Python-based automated vulnerability scanning tool for web applications. Features include SQL injection detection, XSS scanning, and security report generation.",
-    type: "Security Tool",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Python", "Requests", "BeautifulSoup", "Security Testing"],
-  },
-  {
-    title: "Portfolio Website",
-    role: "Full Stack Developer",
-    description:
-      "Personal portfolio website built with modern web technologies. Features responsive design, smooth animations, and optimized performance.",
-    type: "Web Development",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-  },
-]
+import { projectsData } from "@/data/projects" // <-- Pastikan import ini benar
 
 export default function ProjectsSection() {
   return (
@@ -65,10 +9,15 @@ export default function ProjectsSection() {
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-200 overflow-hidden">
+            <Card
+              key={index}
+              className="hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 hover:border-blue-500 transition-all duration-300 overflow-hidden"
+            >
               <div className="aspect-video overflow-hidden">
+                {" "}
+                {/* Ini adalah container gambar */}
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image || "/placeholder.svg"} // <-- Ini tag gambar yang penting
                   alt={project.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
                 />

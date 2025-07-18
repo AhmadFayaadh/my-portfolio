@@ -1,47 +1,4 @@
-const galleryData = [
-  {
-    title: "ARA 6.0 CTF Competition",
-    description: "Participating in cybersecurity capture the flag competition with team members",
-    image: "/placeholder.svg?height=400&width=400",
-    date: "December 2024",
-    category: "Competition",
-  },
-  {
-    title: "KSM Cyber Security Workshop",
-    description: "Conducting penetration testing workshop for junior students",
-    image: "/placeholder.svg?height=400&width=400",
-    date: "November 2024",
-    category: "Workshop",
-  },
-  {
-    title: "ObatKu App Design Process",
-    description: "Working on UI/UX design for mobile health application using Figma",
-    image: "/placeholder.svg?height=400&width=400",
-    date: "October 2024",
-    category: "Project",
-  },
-  {
-    title: "Dies Natalis FIK Event",
-    description: "Managing registration and logistics for faculty anniversary celebration",
-    image: "/placeholder.svg?height=400&width=400",
-    date: "September 2024",
-    category: "Event",
-  },
-  {
-    title: "Cybersecurity Seminar",
-    description: "Attending national cybersecurity seminar on ethical hacking and digital forensics",
-    image: "/placeholder.svg?height=400&width=400",
-    date: "August 2024",
-    category: "Seminar",
-  },
-  {
-    title: "Team Project Presentation",
-    description: "Presenting network security analysis project to faculty members",
-    image: "/placeholder.svg?height=400&width=400",
-    date: "July 2024",
-    category: "Academic",
-  },
-]
+import { galleryData } from "@/data/gallery"
 
 export default function GallerySection() {
   return (
@@ -55,7 +12,7 @@ export default function GallerySection() {
           {galleryData.map((item, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
+              className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.01] hover:border-cyan-400 transition-all duration-300"
             >
               <div className="aspect-square overflow-hidden">
                 <img
@@ -73,11 +30,6 @@ export default function GallerySection() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500 italic">
-            To add more photos: Place images in /public/images/gallery/ folder and update the gallery data
-          </p>
         </div>
       </div>
     </section>

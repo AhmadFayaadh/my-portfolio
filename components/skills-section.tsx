@@ -1,17 +1,57 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Shield, Code, Server, PenToolIcon as Tool } from "lucide-react" // Import icons
 
 const skills = {
-  cybersecurity: [
-    "CTF Competitions",
-    "Ethical Hacking",
-    "Penetration Testing",
-    "Vulnerability Assessment",
-    "Network Security",
-  ],
-  programming: ["HTML", "CSS", "JavaScript", "Python", "C", "SQL", "Java", "React", "Next.js"],
-  systems: ["Linux (Kali, Ubuntu)", "Windows", "Virtual Machines", "Docker"],
-  tools: ["Figma", "Burp Suite", "Wireshark", "Metasploit", "Nmap", "Git", "VS Code"],
+  cybersecurity: {
+    icon: Shield,
+    color: "text-blue-500",
+    badges: [
+      { name: "CTF Competitions", bg: "bg-blue-100", text: "text-blue-800" },
+      { name: "Ethical Hacking", bg: "bg-blue-200", text: "text-blue-900" },
+      { name: "Penetration Testing", bg: "bg-blue-100", text: "text-blue-800" },
+      { name: "Vulnerability Assessment", bg: "bg-blue-200", text: "text-blue-900" },
+      { name: "Network Security", bg: "bg-blue-100", text: "text-blue-800" },
+    ],
+  },
+  programming: {
+    icon: Code,
+    color: "text-green-500",
+    badges: [
+      { name: "HTML", bg: "bg-green-100", text: "text-green-800" },
+      { name: "CSS", bg: "bg-green-200", text: "text-green-900" },
+      { name: "JavaScript", bg: "bg-green-100", text: "text-green-800" },
+      { name: "Python", bg: "bg-green-200", text: "text-green-900" },
+      { name: "C", bg: "bg-green-100", text: "text-green-800" },
+      { name: "SQL", bg: "bg-green-200", text: "text-green-900" },
+      { name: "Java", bg: "bg-green-100", text: "text-green-800" },
+      { name: "React", bg: "bg-green-200", text: "text-green-900" },
+      { name: "Next.js", bg: "bg-green-100", text: "text-green-800" },
+    ],
+  },
+  systems: {
+    icon: Server,
+    color: "text-purple-500",
+    badges: [
+      { name: "Linux (Kali, Ubuntu)", bg: "bg-purple-100", text: "text-purple-800" },
+      { name: "Windows", bg: "bg-purple-200", text: "text-purple-900" },
+      { name: "Virtual Machines", bg: "bg-purple-100", text: "text-purple-800" },
+      { name: "Docker", bg: "bg-purple-200", text: "text-purple-900" },
+    ],
+  },
+  tools: {
+    icon: Tool,
+    color: "text-yellow-500",
+    badges: [
+      { name: "Figma", bg: "bg-yellow-100", text: "text-yellow-800" },
+      { name: "Burp Suite", bg: "bg-yellow-200", text: "text-yellow-900" },
+      { name: "Wireshark", bg: "bg-yellow-100", text: "text-yellow-800" },
+      { name: "Metasploit", bg: "bg-yellow-200", text: "text-yellow-900" },
+      { name: "Nmap", bg: "bg-yellow-100", text: "text-yellow-800" },
+      { name: "Git", bg: "bg-yellow-200", text: "text-yellow-900" },
+      { name: "VS Code", bg: "bg-yellow-100", text: "text-yellow-800" },
+    ],
+  },
 }
 
 export default function SkillsSection() {
@@ -20,62 +60,35 @@ export default function SkillsSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Skills</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-navy-900">Cybersecurity</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {skills.cybersecurity.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="bg-navy-100 text-navy-900 text-xs">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-navy-900">Programming</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {skills.programming.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="bg-gray-100 text-gray-900 text-xs">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-navy-900">Systems</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {skills.systems.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="bg-blue-100 text-blue-900 text-xs">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-navy-900">Tools</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {skills.tools.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="bg-green-100 text-green-900 text-xs">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          {Object.entries(skills).map(([category, data]) => {
+            const Icon = data.icon
+            return (
+              <Card
+                key={category}
+                className="hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 hover:border-blue-500 transition-all duration-300 flex flex-col"
+              >
+                <CardHeader className="flex flex-col items-center space-y-3 pb-4">
+                  <Icon className={`h-8 w-8 ${data.color}`} />
+                  <CardTitle className="text-xl text-navy-900 capitalize text-center">{category}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {data.badges.map((skill) => (
+                      <Badge
+                        key={skill.name}
+                        variant="secondary"
+                        className={`${skill.bg} ${skill.text} text-xs px-4 py-2 rounded-full cursor-pointer 
+                                   hover:bg-blue-600 hover:text-white hover:shadow-md hover:shadow-blue-500/40 
+                                   transition-all duration-200 border border-transparent`}
+                      >
+                        {skill.name}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )
+          })}
         </div>
       </div>
     </section>
