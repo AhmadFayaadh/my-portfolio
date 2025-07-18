@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { projectsData } from "@/data/projects" // <-- Pastikan import ini benar
+import { projectsData } from "@/data/projects"
+import Image from "next/image" // Import Image component
 
 export default function ProjectsSection() {
   return (
@@ -13,13 +14,15 @@ export default function ProjectsSection() {
               key={index}
               className="hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 hover:border-blue-500 transition-all duration-300 overflow-hidden"
             >
-              <div className="aspect-video overflow-hidden">
+              <div className="aspect-video overflow-hidden relative">
                 {" "}
-                {/* Ini adalah container gambar */}
-                <img
-                  src={project.image || "/placeholder.svg"} // <-- Ini tag gambar yang penting
+                {/* Add relative to parent for Image fill */}
+                <Image // Use Image component
+                  src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
+                  fill // Use fill to make image take up parent space
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Define sizes for responsiveness
+                  className="object-cover group-hover:scale-105 transition-transform duration-200"
                 />
               </div>
               <CardHeader>

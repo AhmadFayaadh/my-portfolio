@@ -1,13 +1,14 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { GraduationCap, School } from "lucide-react"
+import Image from "next/image" // Import Image component
 
 // Data pendidikan dengan properti gambar logo dan gambar utama
 const educationData = [
   {
     institution: 'Universitas Pembangunan Nasional "Veteran" Jakarta',
-    degree: "Informatics",
+    degree: "Informatics Engineering",
     gpa: "3.86",
-    period: "2023 - Present",
+    period: "2022 - Present",
     icon: GraduationCap,
     iconColor: "text-navy-900",
     borderColor: "border-l-navy-900",
@@ -18,7 +19,7 @@ const educationData = [
     institution: "SMA EMIISc Jakarta",
     degree: "High School - Science Program",
     gpa: null,
-    period: "2020 - 2023",
+    period: "2019 - 2022",
     icon: School,
     iconColor: "text-gray-700",
     borderColor: "border-l-gray-400",
@@ -44,17 +45,21 @@ export default function EducationSection() {
                 {edu.logoImage && (
                   <div className="flex-shrink-0 mr-8 mb-4 sm:mb-0 w-32 h-32 overflow-hidden transition-all duration-300 group-hover:w-48 relative">
                     {" "}
-                    {/* Ukuran default dan hover diubah di sini */}
-                    <img
+                    {/* Add relative to parent for Image fill */}
+                    <Image // Use Image component
                       src={edu.logoImage || "/placeholder.svg"}
                       alt={`${edu.institution} Logo`}
-                      className="absolute inset-0 w-full h-full object-contain rounded-md border border-gray-200 p-1 transition-opacity duration-300 group-hover:opacity-0"
+                      fill // Use fill to make image take up parent space
+                      sizes="(max-width: 640px) 128px, (max-width: 768px) 128px, 192px" // Define sizes for responsiveness
+                      className="object-contain rounded-md border border-gray-200 p-1 transition-opacity duration-300 group-hover:opacity-0"
                     />
                     {edu.mainImage && (
-                      <img
+                      <Image // Use Image component
                         src={edu.mainImage || "/placeholder.svg"}
                         alt={`${edu.institution} Main Photo`}
-                        className="absolute inset-0 w-full h-full object-cover rounded-md border border-gray-200 p-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        fill // Use fill to make image take up parent space
+                        sizes="(max-width: 640px) 128px, (max-width: 768px) 128px, 192px" // Define sizes for responsiveness
+                        className="object-cover rounded-md border border-gray-200 p-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                       />
                     )}
                   </div>

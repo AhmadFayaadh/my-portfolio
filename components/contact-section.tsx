@@ -6,7 +6,7 @@ export default function ContactSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12">Contact Me</h2>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-          Let's connect! I'm always open to discussing cybersecurity, technology, and new opportunities.
+          Let&apos;s connect! I&apos;m always open to discussing cybersecurity, technology, and new opportunities.
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           <a

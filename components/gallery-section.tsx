@@ -1,4 +1,5 @@
 import { galleryData } from "@/data/gallery"
+import Image from "next/image" // Import Image component
 
 export default function GallerySection() {
   return (
@@ -14,11 +15,14 @@ export default function GallerySection() {
               key={index}
               className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.01] hover:border-cyan-400 transition-all duration-300"
             >
-              <div className="aspect-square overflow-hidden">
-                <img
+              <div className="aspect-square overflow-hidden relative">
+                {/* Add relative to parent for Image fill */}
+                <Image // Use Image component
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                  fill // Use fill to make image take up parent space
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" // Define sizes for responsiveness
+                  className="object-cover group-hover:scale-105 transition-transform duration-200"
                 />
               </div>
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex items-end">
