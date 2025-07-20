@@ -19,8 +19,8 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
           <Image // Use Image component
             src="/images/profile/foto-profile.jpeg"
             alt="Ahmad Fayaadh Baisa"
-            width={160} // Set a fixed width based on sm:w-40 (160px)
-            height={160} // Set a fixed height based on sm:h-40 (160px)
+            width={160} 
+            height={160} 
             className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-8 border-4 border-white shadow-lg object-cover"
             priority // Load this image with high priority
           />
@@ -31,8 +31,8 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
         </p>
         <Button
           onClick={() => scrollToSection("about")}
-          className="bg-blue-600 hover:bg-blue-500 hover:shadow-blue-500/50 hover:-translate-y-1 hover:ring-2 hover:ring-blue-500 transition-all duration-300 text-white px-8 py-3 rounded-full text-lg font-medium"
-        >
+          className="bg-blue-600 hover:bg-blue-500 hover:shadow-blue-500/50 hover:-translate-y-1 hover:ring-2 hover:ring-blue-500 
+                    transition-all duration-300 text-white px-8 py-3 rounded-full text-lg font-medium">
           Learn More
           <ChevronDown className="ml-2 h-5 w-5" />
         </Button>

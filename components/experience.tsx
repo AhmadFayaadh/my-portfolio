@@ -7,7 +7,7 @@ const experiences = [
     organization: "KSM Cyber Security",
     type: "Organization",
     period: "2024 - Present",
-    description: "Conducting penetration testing exercises and security assessments for student projects",
+    description: "As a Member and Red Team Staff, I developed a learning syllabus for Red Team operations, focusing on comprehensive educational modules covering offensive security strategies and techniques.",
     image: "/images/experience/foto-cyber.png",
   },
   {
@@ -15,13 +15,13 @@ const experiences = [
     organization: "CATUR UPNVJ",
     type: "Organization",
     period: "2024",
-    description: "Managing social media content and coordinating cybersecurity awareness events",
+    description: "Represented the organization as a delegate in inter-organizational events, while also managing and posting Instagram stories, covering tournament announcements and partnership collaborations with CATUR UPN Veteran Jakarta's partners.",
     image: "/images/experience/foto-catur.png",
   },
   {
     title: "Bootcamp e-Learning – Program Scheduling & Academic Coordination",
     organization: "KSM Cyber Security",
-    type: "Bootcamp",
+    type: "Committee",
     period: "2025",
     description:
       "Serve as the person in charge (PIC) for front-end classes, coordinating with assistant mentors to ensure smooth running of sessions. Responsible for scheduling, monitoring attendance, and submitting reports after each bootcamp session.",
@@ -32,7 +32,7 @@ const experiences = [
     organization: "Dies Natalis FIK",
     type: "Committee",
     period: "2025",
-    description: "Organizing participant registration and event logistics for faculty anniversary celebration",
+    description: "Assigned to the registration and consumption division, responsible for checking attendee registration and ensuring the availability and distribution of consumption for all guests.",
     image: "/images/experience/logo-upn.jpeg",
   },
 ]
@@ -44,15 +44,10 @@ export default function ExperienceSection() {
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Experience</h2>
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <Card
-              key={index}
-              className="border-l-4 border-l-navy-900 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5
-                         hover:border-blue-500 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center p-6"
-            >
+            <Card key={index} className="border-l-4 border-l-navy-900 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5
+                         hover:border-blue-500 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center p-6">
               {exp.image && (
-                <div className="flex-shrink-0 mr-8 mb-4 sm:mb-0 w-72 overflow-hidden">
-                  {" "}
-                  {/* Ukuran logo */}
+                <div className="flex-shrink-0 mr-6 mb-3 sm:mb-0 w-72">
                   <img
                     src={exp.image || "/placeholder.svg"}
                     alt={`${exp.organization} Logo`}

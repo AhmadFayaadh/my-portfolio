@@ -65,8 +65,7 @@ export default function SkillsSection() {
             return (
               <Card
                 key={category}
-                className="hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 hover:border-blue-500 transition-all duration-300 flex flex-col"
-              >
+                className="hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 hover:border-blue-500 transition-all duration-300 flex flex-col">
                 <CardHeader className="flex flex-col items-center space-y-3 pb-4">
                   <Icon className={`h-8 w-8 ${data.color}`} />
                   <CardTitle className="text-xl text-navy-900 capitalize text-center">{category}</CardTitle>
@@ -79,8 +78,7 @@ export default function SkillsSection() {
                         variant="secondary"
                         className={`${skill.bg} ${skill.text} text-xs px-4 py-2 rounded-full cursor-pointer 
                                    hover:bg-blue-600 hover:text-white hover:shadow-md hover:shadow-blue-500/40 
-                                   transition-all duration-200 border border-transparent`}
-                      >
+                                   transition-all duration-200 border border-transparent`}>
                         {skill.name}
                       </Badge>
                     ))}

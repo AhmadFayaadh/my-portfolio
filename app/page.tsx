@@ -2,15 +2,14 @@
 
 import { useState } from "react"
 import Navigation from "@/components/navigation"
-import HeroSection from "@/components/hero-section"
-import AboutSection from "@/components/about-section"
-import EducationSection from "@/components/education-section"
-import SkillsSection from "@/components/skills-section"
-import ProjectsSection from "@/components/projects-section"
-import CompetitionsSection from "@/components/competitions-section"
-import ExperienceSection from "@/components/experience-section"
-import GallerySection from "@/components/gallery-section"
-import ContactSection from "@/components/contact-section"
+import HeroSection from "@/components/hero"
+import AboutSection from "@/components/about"
+import SkillsSection from "@/components/skills"
+import ProjectsSection from "@/components/projects"
+import CompetitionsSection from "@/components/competitions"
+import ExperienceSection from "@/components/experience"
+import GallerySection from "@/components/gallery"
+import ContactSection from "@/components/contact"
 import Footer from "@/components/footer"
 
 export default function Portfolio() {
@@ -30,7 +29,6 @@ export default function Portfolio() {
 
       <HeroSection scrollToSection={scrollToSection} />
       <AboutSection />
-      <EducationSection />
       <SkillsSection />
       <ProjectsSection />
       <CompetitionsSection />

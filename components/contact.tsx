@@ -11,8 +11,7 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-3 gap-8">
           <a
             href="mailto:ahmadfayaadhba@gmail.com"
-            className="flex flex-col items-center p-6 rounded-lg bg-white/10 hover:bg-white/20 hover:scale-105 hover:border-blue-400 hover:text-blue-400 transition-all duration-300"
-          >
+            className="flex flex-col items-center p-6 rounded-lg bg-white/10 hover:bg-white/20 hover:scale-105 hover:border-blue-400 hover:text-blue-400 transition-all duration-300">
             <Mail className="h-8 w-8 mb-4" />
             <span className="font-medium">Email</span>
             <span className="text-sm text-gray-300 mt-2">ahmadfayaadhba@gmail.com</span>
@@ -21,8 +20,7 @@ export default function ContactSection() {
             href="https://linkedin.com/in/ahmad-fayaadh-baisa"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center p-6 rounded-lg bg-white/10 hover:bg-white/20 hover:scale-105 hover:border-blue-400 hover:text-blue-400 transition-all duration-300"
-          >
+            className="flex flex-col items-center p-6 rounded-lg bg-white/10 hover:bg-white/20 hover:scale-105 hover:border-blue-400 hover:text-blue-400 transition-all duration-300">
             <Linkedin className="h-8 w-8 mb-4" />
             <span className="font-medium">LinkedIn</span>
             <span className="text-sm text-gray-300 mt-2">ahmad-fayaadh-baisa</span>
@@ -31,8 +29,7 @@ export default function ContactSection() {
             href="https://github.com/AhmadFayaadh"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center p-6 rounded-lg bg-white/10 hover:bg-white/20 hover:scale-105 hover:border-blue-400 hover:text-blue-400 transition-all duration-300"
-          >
+            className="flex flex-col items-center p-6 rounded-lg bg-white/10 hover:bg-white/20 hover:scale-105 hover:border-blue-400 hover:text-blue-400 transition-all duration-300">
             <Github className="h-8 w-8 mb-4" />
             <span className="font-medium">GitHub</span>
             <span className="text-sm text-gray-300 mt-2">AhmadFayaadh</span>
