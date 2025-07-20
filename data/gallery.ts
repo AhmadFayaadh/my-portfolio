@@ -22,7 +22,7 @@ export const galleryData: GalleryItem[] = [
     category: "Project",
   },
   {
-    title: "Dies Natalis FIK Event",
+    title: "Dies Natalis FIK Talkshow Event",
     description: "Managing registration and logistics for faculty anniversary celebration",
     image: "/images/gallery/dies-natalis.jpeg",
     date: "2025",

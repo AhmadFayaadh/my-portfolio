@@ -29,7 +29,7 @@ const experiences = [
   },
   {
     title: "Registration & Logistics",
-    organization: "Dies Natalis FIK",
+    organization: "Dies Natalis FIK Talkshow",
     type: "Committee",
     period: "2025",
     description: "Assigned to the registration and consumption division, responsible for checking attendee registration and ensuring the availability and distribution of consumption for all guests.",
