@@ -10,11 +10,10 @@ const skills = {
       { name: "CTF Competitions", bg: "bg-blue-100", text: "text-blue-800" },
       { name: "Ethical Hacking", bg: "bg-blue-200", text: "text-blue-900" },
       { name: "Penetration Testing", bg: "bg-blue-100", text: "text-blue-800" },
-      { name: "Vulnerability Assessment", bg: "bg-blue-200", text: "text-blue-900" },
       { name: "Network Security", bg: "bg-blue-100", text: "text-blue-800" },
     ],
   },
-  programming: {
+  Website: {
     icon: Code,
     color: "text-green-500",
     badges: [
@@ -40,7 +39,6 @@ const skills = {
       { name: "Figma", bg: "bg-yellow-100", text: "text-yellow-800" },
       { name: "Burp Suite", bg: "bg-yellow-200", text: "text-yellow-900" },
       { name: "Wireshark", bg: "bg-yellow-100", text: "text-yellow-800" },
-      { name: "Metasploit", bg: "bg-yellow-200", text: "text-yellow-900" },
       { name: "Nmap", bg: "bg-yellow-100", text: "text-yellow-800" },
       { name: "Git", bg: "bg-yellow-200", text: "text-yellow-900" },
       { name: "VS Code", bg: "bg-yellow-100", text: "text-yellow-800" },
