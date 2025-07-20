@@ -51,7 +51,7 @@ const competitions = [
     logo: "/images/competitions/acad-logo.png",
     certificateLink: "#",
     writeupLink: "https://github.com/AhmadFayaadh/CTF-Writeups/tree/main/CTF-Writeups/ACADefense",
-    certificateImage: null, // Removed certificate view
+    certificateImage: null,
   }
 ]
 
@@ -70,22 +70,24 @@ export default function CompetitionsSection() {
               key={i}
               className="bg-white border border-gray-200 rounded-lg p-5 transition-all duration-300 ease-in-out flex flex-col 
                         justify-between hover:border-blue-500 hover:shadow-[0_0_10px_rgba(59,130,246,0.5)] hover:-translate-y-1">
-              <div className="absolute top-4 right-4 text-xs bg-gray-100 px-3 py-1 rounded-full text-gray-600">
-                {c.year}
-              </div>
-              <div className="flex items-start gap-3 mb-4">
-                {c.logo && (
-                  <Image
-                    src={c.logo}
-                    alt={`${c.name} Logo`}
-                    width={48}
-                    height={48}
-                    className="rounded object-contain"
-                  />
-                )}
-                <div>
-                  <h3 className="text-lg font-semibold">{c.name}</h3>
-                  <p className="text-sm text-gray-500">{c.organization}</p>
+              <div className="flex justify-between items-start mb-4">
+                <div className="flex items-start gap-3">
+                  {c.logo && (
+                    <Image
+                      src={c.logo}
+                      alt={`${c.name} Logo`}
+                      width={48}
+                      height={48}
+                      className="rounded object-contain"
+                    />
+                  )}
+                  <div>
+                    <h3 className="text-lg font-semibold">{c.name}</h3>
+                    <p className="text-sm text-gray-500">{c.organization}</p>
+                  </div>
+                </div>
+                <div className="text-xs bg-gray-100 px-2 py-1 rounded-full text-gray-600 ml-2">
+                  {c.year}
                 </div>
               </div>
               <p className="text-sm font-medium text-gray-800 mb-1">{c.status}</p>

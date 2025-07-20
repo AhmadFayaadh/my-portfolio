@@ -1,13 +1,10 @@
 "use client"
-
 import { Menu, X } from "lucide-react"
-
 interface NavigationProps {
   isMenuOpen: boolean
   setIsMenuOpen: (open: boolean) => void
   scrollToSection: (sectionId: string) => void
 }
-
 const navItems = [
   { id: "hero", label: "Home" },
   { id: "about", label: "About" },
@@ -16,7 +13,6 @@ const navItems = [
   { id: "competitions", label: "Competitions" },
   { id: "contact", label: "Contact" },
 ]
-
 export default function Navigation({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavigationProps) {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm border-b border-gray-200 z-50">
@@ -28,7 +24,8 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen, scrollToSection 
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-600 hover:text-cyan-400 hover:scale-105 hover:underline underline-offset-4 transition-all duration-300 font-medium"
+                className="text-gray-600 hover:text-cyan-400 hover:scale-105 hover:underline underline-offset-4 transition-all duration-300 font-medium
+                           focus-visible:outline-none focus-visible:ring-0" /* Tambahkan ini */
               >
                 {item.label}
               </button>
@@ -44,8 +41,8 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen, scrollToSection 
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 text-gray-600 hover:text-cyan-400 hover:scale-105 hover:underline underline-offset-4 transition-all duration-300"
-              >
+                className="block w-full text-left py-2 text-gray-600 hover:text-cyan-400 hover:scale-105 hover:underline underline-offset-4 transition-all duration-300
+                           focus-visible:outline-none focus-visible:ring-0">
                 {item.label}
               </button>
             ))}

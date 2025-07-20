@@ -3,18 +3,18 @@ import { Badge } from "@/components/ui/badge"
 
 const experiences = [
   {
-    title: "Red Team Staff",
+    title: "Academic Red Team Staff",
     organization: "KSM Cyber Security",
     type: "Organization",
     period: "2024 - Present",
-    description: "As a Member and Red Team Staff, I developed a learning syllabus for Red Team operations, focusing on comprehensive educational modules covering offensive security strategies and techniques.",
+    description: "As a Member and Academic Red Team Staff, I developed a learning syllabus for Red Team operations, focusing on comprehensive educational modules covering offensive security strategies and techniques.",
     image: "/images/experience/foto-cyber.png",
   },
   {
     title: "Media & Event Delegate",
     organization: "CATUR UPNVJ",
     type: "Organization",
-    period: "2024",
+    period: "2024 - Present",
     description: "Represented the organization as a delegate in inter-organizational events, while also managing and posting Instagram stories, covering tournament announcements and partnership collaborations with CATUR UPN Veteran Jakarta's partners.",
     image: "/images/experience/foto-catur.png",
   },
